@@ -1,0 +1,59 @@
+#Sorting hat takes input and gives a result of which house do you belong in
+g = 0
+r = 0
+h = 0
+s = 0
+
+print('Q1) Do you like Dawn or Dusk? \n 1. Dawn \n 2. Dusk')
+
+q1 = int(input('Enter option 1 or 2: '))
+
+if q1 == 1:
+    g = g + 1
+    r = r + 1
+elif q1 == 2:
+    h = h + 1
+    s = s + 1
+else:
+    print('Wrong input.')
+
+print('Q2) When I am dead, I want people to remember me as: \n 1. The Good \n 2. The Great \n 3. The Wise\n 4. The Bold')
+
+q2 = int(input('Enter option 1,2,3 or 4: '))
+
+if q2 == 1:
+    h = h + 2
+elif q2 == 2:
+    s = s + 2
+elif q2 == 3:
+    r = r + 2
+elif q2 == 4:
+    g = g + 2
+else:
+    print('Wrong input.')
+
+print('Q3) Which kind of instrument most pleases your ear? \n 1. The violin \n 2. The trumpet \n 3. The piano \n 4. The drum')
+
+q3 = int(input('Enter option 1,2,3 or 4: '))
+
+if q3 == 1:
+    s = s + 4
+elif q3 == 2:
+    h = h + 4
+elif q3 == 3:
+    g = g + 4 
+elif q3 == 4:
+    g = g + 4
+else:
+    print('Wrong input.')
+
+if g > s and g > h and g > r:
+    print('You belong in Gryffindor house!!!')
+elif s > g and s > h and s > r:
+    print('You belong in Slytherin house!!!')
+elif r > g and r > h and r > s:
+    print('You belong in Ravenclaw house!!!')
+elif h > g and h > s and h > r:
+    print('You belong in Hufflepuff house!!!')
+else:
+    print('Your house in undetermined :( )')
